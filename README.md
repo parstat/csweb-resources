@@ -9,9 +9,9 @@ CSWeb is a web application that allows users to securely transfer cases (questio
 CSWeb eliminates the need to transfer data files by allowing users to instead transfer cases between client devices and a web server. CSEntry data entry applications that are configured to use CSWeb synchronization take advantage of Smart Synchronization, a feature that transfers only cases that are added or modified since the last successful synchronization. Smart Synchronization reduces data transfer costs and Internet bandwidth usage.
 CSWeb uses a MySQL database on the server to store the cases for the census or survey data entry instrument. Unlike a file based synchronization that requires application designers to manage the concatenation of data files, CSWeb allows users to download a single file containing all the cases for the data entry instrument (once the cases are transferred from the client devices to the server).
 
-## Installation in Ubuntu Server
+## Installation on Ubuntu 20.04
 ### Apache
-Apache is the most popular and stable web server for Ubuntu Linux. The Apache HTTP server for Ubuntu 20 provided by the apache2 package. To install apache2 on Ubuntu, open the terminal and execute:
+Apache is the most popular and stable web server for Ubuntu Linux. The Apache HTTP server for Ubuntu 20 is provided by the apache2 package. To install apache2 on Ubuntu, open the terminal and execute:
 ```
 $ sudo apt-get update
 $ sudo apt-get install apache2
@@ -167,14 +167,14 @@ In the example of this repository: `http://csweb-php/csweb/api`.
 ### Live environment
 Remember to replace plain text passwords in the docker-compose.yml file with docker secrets (`https://docs.docker.com/engine/swarm/secrets/`)
 
-In the live server where docker is installed initialize swarm:
+Initialize docker swarm:
 ```
 $ docker swarm init
 ```
 
-You can add other swarm nodes using the token provided when the master node of swarm is initalized.
+*You can add other swarm nodes using the token provided when the master node is initalized.*
 
-Clone the csweb-resources repository in the server
+Clone the csweb-resources repository in the server (only docker-compose.yml file is really needed)
 ```
 $ git clone https://github.com/parstat/csweb-resources.git
 ```
