@@ -146,3 +146,22 @@ The server requirements page will appear by default, you can not continue to the
 
 Next step is the configuration page, add the user credentials you have configured during MySQL setup.
 After a successful configuration you will be redirected to the login page.
+
+## Docker installation
+Clone this repository and build the image.
+Using PowerShell or a Terminal, navigate to the cloned repository on your computer.
+Build the image:
+```
+$ docker image build -t {dockerhub_username_or_private_repository}/{your_image_name}:{your_tag} .
+```
+Start the local testing environment by running (Replace image name in the docker-compose.yml file with your assigned image name, also you can choose your own database name, user and password)
+```
+$ docker-compose up
+```
+
+If it is the first time you are running `docker-compose up` you will be redirected to the setup page of csweb. Check if every requirement is met and continue with database configuration page. Fulfill the required data (database, host, database user, password, and admin password). Remember to put the docker-compose chosen hostnames in the configuration. 
+Also the api url should be the docker internal hostname: `http://{csweb_hostname}/csweb/api` 
+In the example of this repository: `http://csweb-php/csweb/api`.
+
+
+
