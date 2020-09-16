@@ -164,6 +164,28 @@ If it is the first time you are running `docker-compose up` you will be redirect
 Also the api url should be the docker internal hostname: `http://{csweb_hostname}/csweb/api` 
 In the example of this repository: `http://csweb-php/csweb/api`.
 
+### Live environment
+Remember to replace plain text passwords in the docker-compose.yml file with docker secrets (`https://docs.docker.com/engine/swarm/secrets/`)
 
+In the live server where docker is installed initialize swarm:
+```
+$ docker swarm init
+```
 
+You can add other swarm nodes using the token provided when the master node of swarm is initalized.
 
+Clone the csweb-resources repository in the used server
+```
+$ git clone https://github.com/parstat/csweb-resources.git
+```
+
+Navigate inside csweb-resources folder and run the stack deploy command, use option --with-registry-auth if the image is located into a private docker repository.
+Or you can build the image inside the live server but is highly recommended to use a repository
+```
+$ docker stack deploy --compose-file docker-compose.yml --with-registry-auth csweb
+```
+
+You can access and configure the live environment in the following url:
+```
+https://{YOUR_SERVER_URL}/csweb
+```
