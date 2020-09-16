@@ -1,0 +1,30 @@
+version: '3'
+networks: 
+  csweb-network:
+services:
+  csweb-php:
+    networks:
+      - csweb-network
+    image: parstat.azurecr.io/csweb-php
+    volumes:
+      - "csweb-app:/var/www/html/csweb:cached"
+    ports:
+      - "8099:80"
+    hostname: csweb-php
+  
+  csweb-mysql:
+    networks:
+      - csweb-network
+    image: mysql:8.0
+    restart: always
+    volumes:
+      - "csweb-db:/var/lib/mysql"
+    environment:
+      MYSQL_USER: csweb_user
+      MYSQL_PASSWORD: CSWeb4321!
+      MYSQL_DATABASE: csweb
+      MYSQL_ROOT_PASSWORD: CSWeb1234!
+    hostname: csweb-mysql
+volumes:
+  csweb-app:
+  csweb-db:
