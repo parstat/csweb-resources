@@ -163,5 +163,7 @@ If it is the first time you are running `docker-compose up` you will be redirect
 Also the api url should be the docker internal hostname: `http://{csweb_hostname}/csweb/api` 
 In the example of this repository: `http://csweb-php/csweb/api`.
 
+Open your browser and navigate to the mapped port, in the repository case:
+`http://localhost:8099/csweb` 
 
 
