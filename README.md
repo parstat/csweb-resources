@@ -75,7 +75,7 @@ $ sudo service apache2 restart
 ```
 
 ### MySQL Server
-Next, we are going to install MySQL Server as our Database server. Installing MySQL Server on Ubuntu 20.04 is straightforward. Open the terminal update the package list and install the mysql-server package:
+Installing MySQL Server on Ubuntu 20.04 is straightforward. Open the terminal update the package list and install the mysql-server package:
 
 ```
 $ sudo apt-get install mysql-server
@@ -93,7 +93,7 @@ Create the csweb_user:
 ```
 mysql>CREATE USER 'csweb_user'@'localhost' IDENTIFIED BY 'password';
 ```
-Grant permission to database csweb for user csweb:
+Grant permission to database csweb for user csweb_user:
 ```
 mysql>GRANT ALL ON mysql.csweb TO 'csweb_user'@'localhost';
 ```
