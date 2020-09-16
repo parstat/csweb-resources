@@ -187,5 +187,5 @@ $ docker stack deploy --compose-file docker-compose.yml --with-registry-auth csw
 
 You can access and configure the live environment in the following url:
 ```
-https://{YOUR_SERVER_URL}/csweb
+https://{YOUR_SERVER_URL}:{MAPPED_PORT_OR_EMPTY_IF_80}/csweb
 ```
