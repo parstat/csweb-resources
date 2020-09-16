@@ -158,12 +158,12 @@ Start the local testing environment by running (Replace image name in the docker
 ```
 $ docker-compose up
 ```
-
+Open your browser and navigate to the mapped port, in the repository case:
+`http://localhost:8099/csweb` 
 If it is the first time you are running `docker-compose up` you will be redirected to the setup page of csweb. Check if every requirement is met and continue with database configuration page. Fulfill the required data (database, host, database user, password, and admin password). Remember to put the docker-compose chosen hostnames in the configuration. 
 Also the api url should be the docker internal hostname: `http://{csweb_hostname}/csweb/api` 
 In the example of this repository: `http://csweb-php/csweb/api`.
 
-Open your browser and navigate to the mapped port, in the repository case:
-`http://localhost:8099/csweb` 
+
 
 
