@@ -32,7 +32,7 @@ By default, Apache does not allow the use of ‘.htaccess’ file so you will ne
 </Directory>
 ```
 
-Then copy and paste the above text just before “</VirtualHost>” closing tag using this command:
+Then copy and paste the above text just before `</VirtualHost>` closing tag using this command:
 ```
 $ sudo vi /etc/apache2/sites-available/000-default.conf
 ```
@@ -174,7 +174,7 @@ $ docker swarm init
 
 You can add other swarm nodes using the token provided when the master node of swarm is initalized.
 
-Clone the csweb-resources repository in the used server
+Clone the csweb-resources repository in the server
 ```
 $ git clone https://github.com/parstat/csweb-resources.git
 ```
