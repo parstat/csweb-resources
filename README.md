@@ -105,3 +105,39 @@ Restart mysql:
 ```
 $ sudo service mysql restart
 ```
+
+### CSWeb
+Navigate to /var/www/html
+```
+$ cd /var/www/html
+```
+Create “csweb” folder:
+```
+$ sudo mkdir csweb
+```
+Enter the newly created folder:
+```
+$ cd /var/www/html/csweb
+```
+Download csweb package:
+```
+$ wget https://www2.census.gov/software/cspro/download/csweb.zip 
+```
+Unzip the package:
+```
+$ sudo unzip csweb.zip 
+```
+Remove the unnecessary zip file:
+```
+$ sudo rm -rf csweb.zip
+```
+Change owner for csweb folder:
+```
+$ sudo chown www-data:www-data -R /var/www/html/csweb
+```
+Change permissions for csweb folder:
+```
+$ sudo chmod -R 775 /var/www/html/csweb
+```
+
+Open your default browser and navigate to `http://{UBUNTU_SERVER_IP}/csweb/setup`
