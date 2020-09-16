@@ -12,5 +12,7 @@ CSWeb uses a MySQL database on the server to store the cases for the census or s
 ## Installation in Ubuntu Server
 ### Apache
 Apache is the most popular and stable web server for Ubuntu Linux. The Apache HTTP server for Ubuntu 20 provided by the apache2 package. To install apache2 on Ubuntu, open the terminal and execute:
-`$ sudo apt-get update`
-`$ sudo apt-get install apache2`
+```
+$ sudo apt-get update
+$ sudo apt-get install apache2
+```
