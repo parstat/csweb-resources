@@ -141,3 +141,5 @@ $ sudo chmod -R 775 /var/www/html/csweb
 ```
 
 Open your default browser and navigate to `http://{UBUNTU_SERVER_IP}/csweb/setup`
+
+The server requirements page will appear by default, you can not continue to the next step if some of the requirements are not met. You can go back to the above steps to check if you missed some of the configurations.
