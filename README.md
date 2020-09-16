@@ -174,7 +174,7 @@ $ docker swarm init
 
 *You can add other swarm nodes using the token provided when the master node is initalized.*
 
-Clone the csweb-resources repository in the server (only docker-compose.yml file is really needed)
+Clone the csweb-resources repository in the server (only docker-compose.yml file is really needed if the csweb image is downloaded from docker-hub or some other private repository)
 ```
 $ git clone https://github.com/parstat/csweb-resources.git
 ```
