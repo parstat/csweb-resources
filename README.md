@@ -95,7 +95,7 @@ mysql>CREATE USER 'csweb_user'@'localhost' IDENTIFIED BY 'password';
 ```
 Grant permission to database csweb for user csweb_user:
 ```
-mysql>GRANT ALL ON mysql.csweb TO 'csweb_user'@'localhost';
+mysql>GRANT ALL ON csweb.* TO 'csweb_user'@'localhost';
 ```
 Exit mysql:
 ```
@@ -121,7 +121,7 @@ $ cd /var/www/html/csweb
 ```
 Download csweb package:
 ```
-$ wget https://www2.census.gov/software/cspro/download/csweb.zip 
+$ sudo wget https://www2.census.gov/software/cspro/download/csweb.zip 
 ```
 Unzip the package:
 ```
