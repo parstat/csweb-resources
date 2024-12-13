@@ -147,6 +147,27 @@ The server requirements page will appear by default, you can not continue to the
 Next step is the configuration page, add the user credentials you have configured during MySQL setup.
 After a successful configuration you will be redirected to the login page.
 
+DOWNGRADE PHP 8.0 to PHP 7.4
+
+sudo a2dismod php8.0
+sudo a2enmod php7.4
+sudo service apache2 restart
+sudo update-alternatives --config php
+sudo update-alternatives --config phar
+sudo update-alternatives --config phar.phar
+sudo service apache2 restart
+
+UPGRADE PHP 7.4 to PHP 8.0
+
+sudo a2dismod php7.4
+sudo a2enmod php8.0
+sudo service apache2 restart
+sudo update-alternatives --config php
+sudo update-alternatives --config phar
+sudo update-alternatives --config phar.phar
+sudo service apache2 restart
+
+
 ## Docker installation
 Clone this repository and build the image.
 Using PowerShell or a Terminal, navigate to the cloned repository on your computer.
